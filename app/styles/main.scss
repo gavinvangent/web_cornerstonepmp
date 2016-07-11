@@ -3,6 +3,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import "variables.scss";
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -18,15 +20,11 @@ body {
 .header,
 .marketing,
 .footer {
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 !important;
 }
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
-
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
@@ -82,10 +80,61 @@ body {
   }
   /* Space out the masthead */
   .header {
-    margin-bottom: 30px;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
   }
 }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+.navbar {
+  background-color: lighten($main-color, 75%); 
+  margin: 0;
+
+  .navbar-header {
+    a.navbar-brand {
+      padding: 5px;
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.navbar-nav {
+  .active {
+    a, a:hover, a:focus {
+      background-color: $secondary-color !important;
+      color: $main-color !important;
+      font-weight: 600;
+    }
+  }
+
+  :not(.active) { 
+    a {}
+    a:hover, a:focus {
+      background-color: darken($main-color, 20%) !important;
+      color: $secondary-color !important;
+    }
+  }
+}
+
+.lead > img {
+  width: 90%;
+  margin: auto;
+}
+
+.full-width {
+  height: 200px;
+  width: 100%;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+@import "responsive.scss";
