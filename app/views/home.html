@@ -1,0 +1,20 @@
+<div class="content">
+	<div class="full-width scrollable-image-container">
+	  <img ng-src="{{image}}" />
+
+	  <div class="scroll-image prev-img" ng-click="prevImage()">
+	    <i class="fa fa-angle-left secondary"></i>
+	  </div>
+	  <div class="scroll-image next-img" ng-click="nextImage()">
+	    <i class="fa fa-angle-right secondary"></i>
+	  </div>
+	</div>
+
+	<div class="col-md-6 col-md-offset-3">
+		<p class="section-desc">
+			Cornerstone PMP Inc. identifies and controls the risks and liabilities inherent in the planning, design and construction of real estate projects including new building development, existing space renovation, adaptive re-use and expansion.
+		</p>
+	</div>
+</div>
+
+<div ng-if="footer === 'default'" ng-include="'/views/footer.html'"></div>

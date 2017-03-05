@@ -15,6 +15,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
+  font-family: $font-family;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -69,7 +70,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 768px !important;
   }
 
   /* Remove the padding we set earlier */
@@ -86,6 +87,13 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+
+  .content {
+    min-height: calc(90vh - 64px);
+  }
+  .footer {
+    height: 50px;
+  }
 }
 
 
@@ -99,6 +107,10 @@ body {
   margin: 0;
 
   .navbar-header {
+    .navbar-collapse.collapse.in {
+      padding: 0 !important;
+    }
+
     a.navbar-brand {
       padding: 5px;
       img {
@@ -108,7 +120,17 @@ body {
   }
 }
 
+.navbar-default {
+  z-index: 1600;
+}
+
+a {
+   outline: 0 !important;
+}
+
 .navbar-nav {
+  margin: 0;
+
   .active {
     a, a:hover, a:focus {
       background-color: $secondary-color !important;
@@ -120,7 +142,7 @@ body {
   :not(.active) { 
     a {}
     a:hover, a:focus {
-      background-color: darken($main-color, 20%) !important;
+      background-color: $main-color !important;
       color: $secondary-color !important;
     }
   }
@@ -136,40 +158,101 @@ body {
   width: 100%;
 }
 
+.scrollable-image-container {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .scroll-image {
+    background-color: #000;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 80px;
+    opacity: 0.6;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    &.prev-img {
+      left: 0;
+      border-radius: 0px 5px 5px 0px;
+    }
+
+    &.next-img {
+      right: 0;
+      border-radius: 5px 0px 0px 5px;
+    }
+
+    i {
+      font-size: 30px;
+      padding: 5px 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
 .footer-info {
   &:nth-child(1), &:nth-child(2){
     margin-bottom: 20px;
   }
 }
 
-.scroll-places {
-  background-color: #000;
-  width: 40px;
-  height: 40px;
-  position: fixed;
-  top: 130px;
-  opacity: 0.4;
+///////////////////////////////////////////////////////////////////////////////////////////
 
-  &:hover {
-    opacity: 0.8;
+p {
+  &.section-title {
+    font-size: 48px;
+    color: lighten($text-color, 20%)
   }
 
-  &#prev-img {
-    left: 0;
-    border-radius: 0px 5px 5px 0px;
+  &.section-desc {
+    font-size: 20px;
+    text-align: justify;
   }
 
-  &#next-img {
-    right: 0;
-    border-radius: 5px 0px 0px 5px;
+  &.list-title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: justify;
+    color: lighten($text-color, 20%)
   }
 
-  i {
-    font-size: 30px;
-    padding: 5px 15px;
+  span.highlight {
+    color: $main-color;
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////
+img.imageme {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.2;
+  z-index: 100;
+}
+
+.container.imageme {
+  background-color: #fff;
+  z-index: 1500;
+  position: relative;
+  box-shadow: 0 0 10px;
+}
+
+ul {
+  li {
+    font-size: 18px;
+  }
+}
+
+smaller {
+  font-size: 15px;
+}
 
 @import "responsive.scss";
