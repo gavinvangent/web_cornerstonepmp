@@ -1,4 +1,4 @@
 'use strict';
 
-window.cpmpApp.controller('PortfolioCtrl', ['$scope', function ($scope) {
+window.cpmpApp.controller('PortfolioCtrl', [function () {
 }]);

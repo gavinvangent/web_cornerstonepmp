@@ -1,4 +1,4 @@
 'use strict';
 
-window.cpmpApp.controller('ServicesCtrl', ['$scope', function ($scope) {
+window.cpmpApp.controller('ServicesCtrl', [function () {
 }]);

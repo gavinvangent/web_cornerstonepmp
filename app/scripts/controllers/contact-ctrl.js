@@ -1,4 +1,4 @@
 'use strict';
 
-window.cpmpApp.controller('ContactCtrl', ['$scope', function ($scope) {
+window.cpmpApp.controller('ContactCtrl', [function () {
 }]);
