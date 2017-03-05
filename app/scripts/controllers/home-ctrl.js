@@ -1,7 +1,7 @@
 'use strict';
 
 window.cpmpApp.controller('HomeCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
-    var maxImageId = 8,
+    var maxImageId = 6,
         _timeout;
 
     $scope.imageId = parseInt(Math.random() * maxImageId + 1, 10);
