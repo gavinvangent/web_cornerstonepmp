@@ -24,6 +24,13 @@
     height: 600px;
   }
 
+  .content {
+    min-height: calc(90vh - 72px);
+  }
+  .footer {
+    height: 70px;
+  }
+
   .navbar-nav {
     float: right !important;
   }
@@ -56,5 +63,25 @@
       border-left: 1px solid #ddd;
       border-right: 1px solid #ddd;
     }
+  }
+
+  p {
+    &.section-title {
+      font-size: 48px;
+    }
+
+    &.section-desc {
+      font-size: 20px;
+      text-align: justify;
+    }
+
+    &.list-title {
+      font-size: 20px;
+      text-align: justify;
+    }
+  }
+
+  smaller {
+    font-size: 11px;
   }
 }
