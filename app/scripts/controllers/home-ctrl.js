@@ -18,7 +18,7 @@ window.cpmpApp.controller('HomeCtrl', ['$scope', '$timeout', function ($scope, $
         _timeout = $timeout(function(){
             ++$scope.imageId;
             setImage();
-        }, 4000);
+        }, 7000);
     };
 
     $scope.prevImage = function(){
